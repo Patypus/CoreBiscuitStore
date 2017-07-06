@@ -1,0 +1,10 @@
+﻿@using CoreBiscuitStore.Models.Product
+
+@model List<BiscuitViewModel>
+
+<div>
+    @foreach (var biscuit in Model)
+    {
+        <span>@biscuit.Name</span>
+    }
+</div>

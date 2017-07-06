@@ -1,7 +1,7 @@
 using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace TestsTests
+namespace CoreBiscuitStoreWebTests
 {
     [TestClass]
     public class UnitTest1

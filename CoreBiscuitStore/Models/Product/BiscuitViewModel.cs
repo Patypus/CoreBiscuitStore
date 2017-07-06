@@ -1,4 +1,4 @@
-﻿namespace CoreBiscuitStore.Models
+﻿namespace CoreBiscuitStore.Models.Product
 {
     public class BiscuitViewModel
     {
