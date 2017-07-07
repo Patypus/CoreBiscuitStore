@@ -6,10 +6,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\css\" />
+    <Content Include="wwwroot\css\menu\menu.css" />
+    <Content Include="wwwroot\css\Site.css" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="wwwroot\src\" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="BuildBundlerMinifier" Version="2.4.337" />
     <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.0.0" />
     <PackageReference Include="Microsoft.AspNetCore" Version="1.1.2" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="1.1.3" />
