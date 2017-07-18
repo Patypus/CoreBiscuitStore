@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using CoreBiscuitStoreDomain.Facades.Interfaces;
+using CoreBiscuitStoreDomain.Facades;
 
 namespace CoreBiscuitStore
 {
@@ -17,6 +19,13 @@ namespace CoreBiscuitStore
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+
+            SetupOwnServices(services);
+        }
+
+        private void SetupOwnServices(IServiceCollection services)
+        {
+            services.AddTransient<IBiscuitFacade, BiscuitFacade>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
