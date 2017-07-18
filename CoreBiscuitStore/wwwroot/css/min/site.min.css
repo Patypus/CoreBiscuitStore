@@ -8,6 +8,36 @@
 span {
     color: blue;
 }
+
+.colour-stripe {
+    width: 20%;
+    display: inline-block;
+    height: 50px;
+}
+
+.stripe-1 {
+    background-color: #693818;
+}
+
+.stripe-2 {
+    background-color: #E9CE7D;
+}
+
+.stripe-3 {
+    background-color: #ABC4A1;
+}
+
+.stripe-4 {
+    background-color: #F5C4CD;
+}
+
+.stripe-5 {
+    background-color: #17BEBB;
+}
+
+.striped-header {
+    background: repeating-linear-gradient( to right, #693818 20%, #E9CE7D 20%, #ABC4A1 20%, #F5C4CD 20%, #17BEBB 20%);
+}
 h1 {
     color: red;
 }
