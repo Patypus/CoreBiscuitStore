@@ -5,11 +5,13 @@ VisualStudioVersion = 15.0.26430.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreBiscuitStore", "CoreBiscuitStore\CoreBiscuitStore.csproj", "{99612568-DD83-4866-BDB1-64747BBF2B17}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreBiscuitStoreDomain", "CoreBiscuitStoreDomain\CoreBiscuitStoreDomain.csproj", "{E50FA4EF-5822-436E-91CC-25F272EB1A4C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreBiscuitStoreDomain", "CoreBiscuitStoreDomain\CoreBiscuitStoreDomain.csproj", "{E50FA4EF-5822-436E-91CC-25F272EB1A4C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreBiscuitStoreDomainTests", "CoreBiscuitStoreDomainTests\CoreBiscuitStoreDomainTests.csproj", "{86A2115B-3ED6-4F97-8841-9B2B75A873BA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreBiscuitStoreDomainTests", "CoreBiscuitStoreDomainTests\CoreBiscuitStoreDomainTests.csproj", "{86A2115B-3ED6-4F97-8841-9B2B75A873BA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreBiscuitStoreWebTests", "CoreBiscuitStoreWebTests\CoreBiscuitStoreWebTests.csproj", "{67780696-D3EB-4E79-9285-F1F9BD5BA68F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreBiscuitStoreWebTests", "CoreBiscuitStoreWebTests\CoreBiscuitStoreWebTests.csproj", "{67780696-D3EB-4E79-9285-F1F9BD5BA68F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreBiscuitStoreData", "CoreBiscuitStoreData\CoreBiscuitStoreData.csproj", "{A6B76C8E-4CA3-4B9C-96BA-D0FA23ED6F16}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{67780696-D3EB-4E79-9285-F1F9BD5BA68F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{67780696-D3EB-4E79-9285-F1F9BD5BA68F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{67780696-D3EB-4E79-9285-F1F9BD5BA68F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6B76C8E-4CA3-4B9C-96BA-D0FA23ED6F16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6B76C8E-4CA3-4B9C-96BA-D0FA23ED6F16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6B76C8E-4CA3-4B9C-96BA-D0FA23ED6F16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6B76C8E-4CA3-4B9C-96BA-D0FA23ED6F16}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
