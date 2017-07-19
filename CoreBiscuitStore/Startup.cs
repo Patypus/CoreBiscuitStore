@@ -9,6 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using CoreBiscuitStoreDomain.Facades.Interfaces;
 using CoreBiscuitStoreDomain.Facades;
+using CoreBiscuitStoreDomain.Setup;
 
 namespace CoreBiscuitStore
 {
@@ -26,6 +27,8 @@ namespace CoreBiscuitStore
         private void SetupOwnServices(IServiceCollection services)
         {
             services.AddTransient<IBiscuitFacade, BiscuitFacade>();
+
+            DependancyInjectionSetup.RegisterDomainDependancies(services);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
