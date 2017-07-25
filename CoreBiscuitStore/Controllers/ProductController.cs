@@ -20,7 +20,7 @@ namespace CoreBiscuitStore.Controllers
 
         public IActionResult List()
         {
-            //var tempModel = new List<BiscuitDto>
+            //var allProductDtos = new List<BiscuitDto>
             //{
             //    new BiscuitDto { Id = 1, Name = "1" },
             //    new BiscuitDto { Id = 2, Name = "2" },
