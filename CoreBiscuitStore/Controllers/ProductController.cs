@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using CoreBiscuitStore.Models.Product;
 using CoreBiscuitStoreDomain.Facades.Interfaces;
+using CoreBiscuitStoreDomain.Dtos;
 
 namespace CoreBiscuitStore.Controllers
 {
@@ -19,12 +20,26 @@ namespace CoreBiscuitStore.Controllers
 
         public IActionResult List()
         {
-            var tempModel = new List<BiscuitViewModel>
-            {
-                new BiscuitViewModel { Name = "1" }
-            };
+            //var tempModel = new List<BiscuitDto>
+            //{
+            //    new BiscuitDto { Id = 1, Name = "1" },
+            //    new BiscuitDto { Id = 2, Name = "2" },
+            //    new BiscuitDto { Id = 3, Name = "3" }
+            //};
 
-            return View(tempModel);
+            var allProductDtos = _biscuitFacade.GetAllBiscuitTypes();
+            var modelList = allProductDtos.Select(ConvertBiscuitDtoToViewModel);
+
+            return View(modelList);
+        }
+
+        private BiscuitViewModel ConvertBiscuitDtoToViewModel(BiscuitDto dto)
+        {
+            return new BiscuitViewModel
+            {
+                Id = dto.Id,
+                Name = dto.Name
+            };
         }
     }
 }

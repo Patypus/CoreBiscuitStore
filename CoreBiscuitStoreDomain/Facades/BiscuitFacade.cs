@@ -20,7 +20,7 @@ namespace CoreBiscuitStoreDomain.Facades
         }
 
 
-        public BiscuitDto GetAllBiscuitTypes()
+        public IEnumerable<BiscuitDto> GetAllBiscuitTypes()
         {
             throw new NotImplementedException();
         }

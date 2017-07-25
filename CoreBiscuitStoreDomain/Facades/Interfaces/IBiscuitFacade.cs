@@ -7,6 +7,6 @@ namespace CoreBiscuitStoreDomain.Facades.Interfaces
 {
     public interface IBiscuitFacade
     {
-        BiscuitDto GetAllBiscuitTypes();
+        IEnumerable<BiscuitDto> GetAllBiscuitTypes();
     }
 }
