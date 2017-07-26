@@ -10,11 +10,25 @@ using Microsoft.Extensions.Logging;
 using CoreBiscuitStoreDomain.Facades.Interfaces;
 using CoreBiscuitStoreDomain.Facades;
 using CoreBiscuitStoreDomain.Setup;
+using CoreBiscuitStoreCommon.Settings;
+using Microsoft.Extensions.Configuration;
 
 namespace CoreBiscuitStore
 {
     public class Startup
     {
+        public Startup(IHostingEnvironment env)
+        {
+            var builder = new ConfigurationBuilder()
+                .SetBasePath(env.ContentRootPath)
+                .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
+                .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
+                .AddEnvironmentVariables();
+            Configuration = builder.Build();
+        }
+
+        public IConfigurationRoot Configuration { get; }
+        
         // This method gets called by the runtime. Use this method to add services to the container.
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
@@ -26,6 +40,12 @@ namespace CoreBiscuitStore
 
         private void SetupOwnServices(IServiceCollection services)
         {
+            services.Configure<ApplicationConfiguration>(config =>
+            {
+                config.ConnectionString = Configuration.GetSection("MongoConnection:ConnectionString").Value;
+                config.Database = Configuration.GetSection("MongoConnection:Database").Value;
+            });
+
             services.AddTransient<IBiscuitFacade, BiscuitFacade>();
 
             DependancyInjectionSetup.RegisterDomainDependancies(services);
