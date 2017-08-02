@@ -8,7 +8,7 @@ using MongoDB.Driver;
 
 namespace CoreBiscuitStoreData.Repository
 {
-    public class BiscuitRepository : IBiscuitRepository
+    public class BiscuitRepository : IRepository<Biscuit>
     {
         private readonly IBiscuitStoreContext _context;
 
@@ -17,7 +17,7 @@ namespace CoreBiscuitStoreData.Repository
             _context = context;
         }
 
-        public async Task<IEnumerable<Biscuit>> GetAllBiscuits()
+        public async Task<IEnumerable<Biscuit>> GetAll()
         {
             return await _context.Biscuits.Find(new BsonDocument()).ToListAsync();
         }
