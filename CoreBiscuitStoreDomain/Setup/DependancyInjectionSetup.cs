@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Microsoft.Extensions.DependencyInjection;
-using CoreBiscuitStoreData;
+﻿using Microsoft.Extensions.DependencyInjection;
+using CoreBiscuitStoreData.Repository.Resolver;
 
 namespace CoreBiscuitStoreDomain.Setup
 {
@@ -10,7 +7,7 @@ namespace CoreBiscuitStoreDomain.Setup
     {
         public static void RegisterDomainDependancies(IServiceCollection services)
         {
-            services.AddTransient<IRepositoryFactory, RepositoryFactory>();
+            services.AddTransient<IRepositoryResolver, RepositoryResolver>();
         }
     }
 }
