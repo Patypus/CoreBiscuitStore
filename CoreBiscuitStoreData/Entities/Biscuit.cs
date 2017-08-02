@@ -2,7 +2,7 @@
 
 namespace CoreBiscuitStoreData.Entities
 {
-    public class Biscuit
+    public class Biscuit : IEntity
     {
         [BsonId]
         public int Id { get; set; }
