@@ -4,16 +4,17 @@ using System.Collections.Generic;
 using System.Text;
 using CoreBiscuitStoreDomain.Dtos;
 using CoreBiscuitStoreData;
+using CoreBiscuitStoreData.Repository.Resolver;
 
 namespace CoreBiscuitStoreDomain.Facades
 {
     public class BiscuitFacade : IBiscuitFacade
     {
-        private readonly IRepositoryFactory _repositoryFacatory;
+        private readonly IRepositoryResolver _repositoryResolver;
 
-        public BiscuitFacade(IRepositoryFactory repositoryFactory)
+        public BiscuitFacade(IRepositoryResolver repositoryResolver)
         {
-            _repositoryFacatory = repositoryFactory;
+            _repositoryResolver = repositoryResolver;
         }
         
         public IEnumerable<BiscuitDto> GetAllBiscuitTypes()

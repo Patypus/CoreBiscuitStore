@@ -1,4 +1,5 @@
 ﻿using CoreBiscuitStoreData;
+using CoreBiscuitStoreData.Repository.Resolver;
 using CoreBiscuitStoreDomain.Facades;
 using CoreBiscuitStoreDomain.Facades.Interfaces;
 using Moq;
@@ -12,17 +13,17 @@ namespace CoreBiscuitStoreDomainTests.Facades
     public class BiscuitFacadeTests
     {
         private IBiscuitFacade _facade;
-        private Mock<IRepositoryFactory> _mockRepositoryFactory;
+        private Mock<IRepositoryResolver> _mockRepositoryResolver;
 
         public BiscuitFacadeTests()
         {
-            _mockRepositoryFactory = new Mock<IRepositoryFactory>();
+            _mockRepositoryResolver = new Mock<IRepositoryResolver>();
         }
         
         [Fact]
         public void GetAllBiscuitTypes_ReturnsExpectedEntities()
         {
-            _facade = new BiscuitFacade(_mockRepositoryFactory.Object);
+            _facade = new BiscuitFacade(_mockRepositoryResolver.Object);
             var result = _facade.GetAllBiscuitTypes();
 
             Assert.False(true);
